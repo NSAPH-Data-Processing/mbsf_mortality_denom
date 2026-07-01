@@ -1,0 +1,9 @@
+# Snakemake execution defaults for the MBSF mortality denominator pipeline.
+# This file keeps workflow-run settings separate from the main pipeline config,
+# making it easier to maintain alternate execution profiles such as test, debug,
+# or full production runs without changing the main config.yaml.
+
+run:
+  year : [2020,2021]
+  geoboundaries: [zcta]
+  temporal_frequency: [daily]

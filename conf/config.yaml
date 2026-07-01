@@ -1,0 +1,23 @@
+# Main Hydra configuration for the MBSF mortality denominator pipeline
+
+defaults:
+  - _self_
+  - datapaths: mbsf_mortality_denom
+  - snakemake
+
+#params 
+run:
+  year_start: 2000
+  year_end: 2021
+  temporal_frequency: [yearly, daily]   # yearly | daily
+  geoboundaries: [county, zcta]         # county | zcta
+  year: null                            # optional single-year override
+  output_file: null
+  
+
+# Hydra runtime 
+hydra:
+  run:
+    dir: logs/hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job:
+    chdir: false
