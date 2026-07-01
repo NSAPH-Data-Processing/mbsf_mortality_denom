@@ -1,0 +1,22 @@
+# Datapaths configuration for MBSF Mortality Denominator pipeline
+name: mbsf_mortality_denom
+dirs:
+  input:
+    medicare:
+      enrollments: null
+      beneficiaries: null
+    normalization: null
+    us_geoboundaries__census: null
+    bene_xwalk: null
+    zip2zcta: null
+      
+  intermediate:
+    denom: null
+  output:
+    denom: null
+    zcta:
+      yearly: null
+      daily: null
+    county:
+      yearly: null
+      daily: null

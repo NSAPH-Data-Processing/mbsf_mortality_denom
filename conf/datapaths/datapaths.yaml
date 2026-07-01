@@ -1,0 +1,25 @@
+# General data paths structure  
+# If files are stored within the local copy of the repository, then use null
+# If stored elsewhere, use absolute or relative path (can also use symbolic links)
+
+name: null
+
+dirs:
+  input:
+    raw: null  # Raw Medicare data 
+    normalization : 
+    geoboundaries: null  # Geographic boundary files
+    bene_xwalk: null  # Auxiliary bene crosswalk files
+    zip2zcta: null
+    
+  intermediate:
+    denom: null
+    
+  output:
+    denom: null
+    zcta:
+      yearly: null 
+      daily: null
+    county:
+      yearly: null
+      daily: null
